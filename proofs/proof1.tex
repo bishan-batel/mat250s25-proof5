@@ -1,0 +1,33 @@
+\begin{question}
+
+	If $AB$ is one-to-one (injective) as a linear transformation, then so is $B$ ($P_1$).
+
+
+	\begin{proof}
+
+
+		$$
+			\begin{align*}
+				\llet f & : Y       \to 	 Z                 \\
+				f       & : \vec x  \mapsto 	 A\vec x       \\
+				\\
+				\llet g & : X       \to 	 Y                 \\
+				g       & : \vec x        \mapsto 	 B\vec x
+			\end{align*}
+		$$
+
+		$f\circ g$ is injective because $f\circ g = AB$.
+
+		$$
+			\begin{align*}
+				\llet P_{2}	 =		\not\exists\, x_0, x_1\in X : \, (f\circ g)(x_0) = (f\circ g)(x_1) \wedge x_0 \neq x_1
+			\end{align*}
+		$$
+
+		\begin{align*}
+			\neg P_1  \implies & \exists x_0, x_1 \in X  : \, g(x_0)           = g(x_1) \wedge x_0 \neq x_1                       \\
+			\implies           & \exists x_0,x_1\in X                 : \, (f\circ g)(x_0)  = (f\circ g)(x_1) \wedge x_0 \neq x_1
+		\end{align*}
+		$$ P_2 \wedge	\neg P_1 \implies  \neg P_2 \therefore P_1 \text{ is true.} $$
+	\end{proof}
+\end{question}

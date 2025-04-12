@@ -1,0 +1,41 @@
+\documentclass{exam}
+
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{braket}
+\usepackage{forloop}
+\usepackage{amsthm}
+\usepackage[backend=biber]{biblatex}
+
+\theoremstyle{plain}
+\newtheorem{assumption}{Assumption}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+\newtheorem{lemma}{Lemma}
+
+\input{preamble.sty}
+
+\addbibresource{references.bib}
+
+\begin{document}
+
+\title{MAT250 Proof 3}
+\author{Kishan S Patel}
+\maketitle
+
+\renewcommand{\qedsymbol}{QED}
+
+This proof is an altered version of one I submitted for MAT258 this semester (about 3 weeks ago for the 2nd proof assignment).
+
+
+Let $A$ be an $n\times k$ matrix, and let $B$ be a $k\times m$ matrix. $AB$ is their product $n\times m$ matrix.
+
+\begin{questions}
+	\input{proofs/proof1.tex}
+	\input{proofs/proof2.tex}
+\end{questions}
+
+\end{document}
