@@ -1,33 +1,25 @@
 \begin{question}
-
-	If $AB$ is one-to-one (injective) as a linear transformation, then so is $B$ ($P_1$).
-
+	Prove that $q \ge p$ ($P_1$).
 
 	\begin{proof}
 
+		Assuming $\neg P_1 \implies \exists U \subseteq \R^n, V \subseteq U : \dim V > \dim U$.
 
-		$$
-			\begin{align*}
-				\llet f & : Y       \to 	 Z                 \\
-				f       & : \vec x  \mapsto 	 A\vec x       \\
-				\\
-				\llet g & : X       \to 	 Y                 \\
-				g       & : \vec x        \mapsto 	 B\vec x
-			\end{align*}
-		$$
 
-		$f\circ g$ is injective because $f\circ g = AB$.
+		Let $\set{ \vec v_1, \vec v_2, \cdots, \vec v_q }$ be a basis of $V$.
 
-		$$
-			\begin{align*}
-				\llet P_{2}	 =		\not\exists\, x_0, x_1\in X : \, (f\circ g)(x_0) = (f\circ g)(x_1) \wedge x_0 \neq x_1
-			\end{align*}
-		$$
 
-		\begin{align*}
-			\neg P_1  \implies & \exists x_0, x_1 \in X  : \, g(x_0)           = g(x_1) \wedge x_0 \neq x_1                       \\
-			\implies           & \exists x_0,x_1\in X                 : \, (f\circ g)(x_0)  = (f\circ g)(x_1) \wedge x_0 \neq x_1
-		\end{align*}
-		$$ P_2 \wedge	\neg P_1 \implies  \neg P_2 \therefore P_1 \text{ is true.} $$
+		Assuming $q>p$, we can take $p$ vectors from the set $\set{\vec v_1, \vec v_2, \cdots, \vec v_p, \cdots, \vec v_q}$  to form a basis of $U$ as the set $\set{\vec v_1, \vec v_2, \cdots, \vec v_p}$.
+
+		Because $V \subseteq U$, all vectors must in both sets must be inside $U$.
+
+		$$V \subseteq U \implies \forall i\, v_i \in U$$
+
+		Forming a linearly independent set that spans $U$ from $\set{\vec v_1, \vec v_2, \cdots, \vec v_p}$, the vector $\vec v_q$ is not inside this set but is an element in $U$. This must mean there
+		exists a linear combination between the set and some vector $\vec x$ such that it equals $\vec v_q$.
+
+		$$ \neg P_1 \implies \exists \vec x : \mat{\vec v_1 & \cdots & \vec v_p}x = \vec v_q $$
+
+		This imposes a contradiction to $\mathcal L_2$, as the set $\set{\vec v_1, \vec v_2, \cdots, \vec v_p, \cdots, \vec v_q}$ is linearly independent, therefore $P_1$ must be true.
 	\end{proof}
 \end{question}

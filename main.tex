@@ -22,16 +22,27 @@
 
 \begin{document}
 
-\title{MAT250 Proof 3}
+\title{MAT250 Proof 5}
 \author{Kishan S Patel}
 \maketitle
 
 \renewcommand{\qedsymbol}{QED}
 
-This proof is an altered version of one I submitted for MAT258 this semester (about 3 weeks ago for the 2nd proof assignment).
+\begin{lemma}[$\mathcal L_1$]
+	For any linear subspace $U$, a basis of $U$ constructed from some set $S$ of linearly independent vectors in $U$ must have a cardinality of $\dim U$.
+
+	$$ \forall n\in \N,U \subseteq \R^n  : U = \op{span}\pa{  \left\{  \vec u_1, \vec u_2, \cdots, \vec u_{\dim U}  \right\} } $$
+\end{lemma}
+
+\begin{lemma}[$\mathcal L_2$]
+	For any linearly independent set of vectors $\set{\vec v_1, \cdots, \vec v_n}$, for all $v_i$ there does not exist a linear combination with all other vectors ($v_i : i \neq j$) that sums to $v_i$.
+\end{lemma}
 
 
-Let $A$ be an $n\times k$ matrix, and let $B$ be a $k\times m$ matrix. $AB$ is their product $n\times m$ matrix.
+Let $\R^n$ be a Euclidean space, and let $U, V\subseteq \R^n$ be subspaces such that $V \subseteq U$
+
+Let $p = \dim U$ and $q=\dim V$.
+
 
 \begin{questions}
 	\input{proofs/proof1.tex}

@@ -1,13 +1,14 @@
 \begin{question}
-	If $AB$ is surjective as a transformation, then so is $A$.
+	If $q=p$ then $V=U$ ($P_2$).
 
 	\begin{proof}
+		Let $\vec u \in U$. Because $V\subseteq U$ and $\dim U = \dim V$, any basis $\set{\vec v_1, \cdots, \vec v_q}$ of $V$ is also a basis of $U$ as all elements in the set are elements of $U$.
+
+		Because any basis of $V$ is a basis of $U$, $\vec u$ can be written as a linear combination of the basis vectors of $V$, therefore $\vec u \in V$.
+
 		\begin{align*}
-			\forall z \in Z, \exists x \in X            & : (f\circ g)(x) = z \\
-			f(g(x))                                     & = z                 \\
-			\llet y\in Y                                & = g(x)              \\
-			f(y)                              = f(g(x)) & = z                 \\
+			u \in V \wedge u \in U \implies U \subseteq V     \\
+			V \subseteq U \wedge U \subseteq V \implies U = V \\
 		\end{align*}
-		$$ \therefore f \text{ is surjective.} $$
 	\end{proof}
 \end{question}
